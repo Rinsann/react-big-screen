@@ -1,6 +1,6 @@
 {
-  "name": "big-screen-demo-01",
-  "version": "0.0.0",
+  "name": "react-big-screen",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

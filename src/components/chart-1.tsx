@@ -11,7 +11,7 @@ export const Chart1 = () => {
         data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
         axisTick: {show: false},
         axisLine: {
-          lineStyle: {color: '#083B70'}
+          lineStyle: {color:  '#083B70'}
         },
         axisLabel: {
           formatter(val) {

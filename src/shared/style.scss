@@ -37,7 +37,6 @@ body {
 
 #root {
   margin: 0 auto;
-  background: skyblue;
   display: flex;
   flex-direction: column;
 }
@@ -46,3 +45,6 @@ body {
   flex: 1
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+}

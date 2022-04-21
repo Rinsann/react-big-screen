@@ -1,18 +1,27 @@
 @import "../shared/helper";
 
-.home {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background: #010310;
-  color: white;
-
+.home {flex: 1;display: flex;flex-direction: column;
+  background: #010310; color: white;
+  font-size: px(16);
   > header {
     height: px(99);
     background-size: cover;
+    width: px(2420);
+    margin: 0 auto;
   }
-
+  > footer {
+    height: px(68);
+    border: 1px solid #0d2d59;
+    margin: px(20) 0 1px;
+    border-radius: 4px;
+    background: #0c0d2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   > main {
+    width: px(2420);
+    margin: 0 auto;
     padding-top: px(30);
     flex: 1;
     display: grid;
@@ -21,18 +30,13 @@
       "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
     grid-column-gap: px(28);
     grid-row-gap: px(28);
-
-    > section {
-      text-align: center;
-    }
-
+    > section {text-align: center;}
     .bordered {
       border: 1px solid #0764bc;
       border-radius: 4px;
       position: relative;
       box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
       background: #0c1139;
-
       &::before {
         content: '';
         position: absolute;
@@ -51,33 +55,29 @@
         0 -9px 0 -8px #0d4483,;
       }
     }
-
     > .section1 {
       grid-area: box1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
     > .section2 {
       grid-area: box2;
     }
-
     > .section3 {
       grid-area: box3;
     }
-
     > .section4 {
       grid-area: box4;
     }
-
     > .section5 {
       grid-area: box5;
     }
-
-    .管辖统计 {
+    .管辖统计, .破获排名 {
       height: px(315);
       display: flex;
       flex-direction: column;
       align-items: center;
-
       h2 {
         flex-shrink: 0;
         border: 1px solid #0a5299;
@@ -88,10 +88,30 @@
         padding: px(10) px(28);
         text-shadow: 0 0 px(3) white;
       }
-
       .chart {
         flex: 1;
         width: 100%;
+      }
+    }
+    .破获排名 {
+      height: px(423);
+      .legend {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0 px(20) px(10);
+        > .first, > .second {
+          display: inline-block;
+          width: px(18); height: px(12);
+          background: red; margin: 0 px(10);
+        }
+        .first {
+          background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);
+        }
+        .second {
+          background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
+        }
       }
     }
   }

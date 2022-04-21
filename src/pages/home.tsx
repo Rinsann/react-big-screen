@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import './home.scss';
 import headerBg from '../images/header.png';
 import {Chart1} from '../components/chart-1';
 
-const px = (n) => n / 2420 * (window as any).pageWidth;
 export const Home = () => {
   return (
     <div className="home">

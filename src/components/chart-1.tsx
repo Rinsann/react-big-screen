@@ -1,5 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
+import {px} from '../shared/px';
+import {baseEchartOptions} from '../shared/base-echart-options';
 import {createEchartsOptions} from '../shared/create-echarts-options';
 
 export const Chart1 = () => {
@@ -11,7 +13,7 @@ export const Chart1 = () => {
         data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
         axisTick: {show: false},
         axisLine: {
-          lineStyle: {color:  '#083B70'}
+          lineStyle: {color: '#083B70'}
         },
         axisLabel: {
           formatter(val) {

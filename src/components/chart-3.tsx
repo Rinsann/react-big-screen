@@ -8,6 +8,10 @@ export const Chart3 = () => {
   useEffect(() => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
+      tooltip: {
+        trigger: 'item',
+        show: true
+      },
       legend: {
         bottom: px(10),
         textStyle: {color: 'white'},
@@ -34,7 +38,7 @@ export const Chart3 = () => {
         splitLine: {lineStyle: {color: '#073E78'}},
         axisLabel: {
           formatter(val) {
-            return val * 100 + '%';
+            return val * 1 + '%';
           }
         }
       },
@@ -42,27 +46,27 @@ export const Chart3 = () => {
         {
           name: '抢劫',
           type: 'line',
-          data: [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09].reverse()
+          data: [10, 12, 11, 14, 9, 23, 21, 21, 21]
         },
         {
           name: '醉驾',
           type: 'line',
-          data: [0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10].reverse()
+          data: [10, 22, 14, 54, 30, 6, 12, 4, 14]
         },
         {
           name: '盗窃',
           type: 'line',
-          data: [0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11].reverse()
+          data: [8, 19, 19, 9, 19, 13, 12, 13, 12]
         },
         {
           name: '故意杀人',
           type: 'line',
-          data: [0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12].reverse()
+          data: [22, 18, 19, 23, 29, 33, 3, 3, 31]
         },
         {
           name: '故意伤人',
           type: 'line',
-          data: [0.05, 0.06, 0.07, 0.08, 0.09, 0.10, 0.11, 0.12, 0.13].reverse()
+          data: [21, 21, 12, 42, 1, 34, 36, 38, 30]
         }
       ].map(obj => ({
         ...obj,
